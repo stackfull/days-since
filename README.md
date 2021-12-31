@@ -366,3 +366,19 @@ This project was generated with [go-template][go-template-link] generator and
 [cookiecutter-link]: https://github.com/cookiecutter/cookiecutter
 [release-drafter]: https://github.com/marketplace/actions/release-drafter
 [creating-secrets]: https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository
+
+## react-typescript iris bit...
+
+iris-cli run react-typescript
+details...
+Install the dependencies and build with Yarn...
+
+cd app
+yarn install
+yarn build
+cd ../
+...then start the Iris web server:
+
+go get -u github.com/go-bindata/go-bindata/...
+go-bindata -prefix "app/build" -fs ./app/build/...
+go run .

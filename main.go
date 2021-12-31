@@ -1,21 +1,22 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
-	"github.com/stackfull/days-since/src"
+	"github.com/kataras/iris/v12"
+
+	since "github.com/stackfull/days-since/src"
 )
 
-// title contains the name of the project
-const title = "days-since"
-
-/*
-ProjectName returns the value of `title` string
-*/
-func ProjectName() string {
-	return title
-}
-
 func main() {
-	fmt.Printf("Running project: %s\n", src.ProjectName())
+	app := iris.New()
+
+	app.PartyFunc("/since", since.Router())
+
+	// $ go-bindata -prefix "app/build" -fs ./app/build/...
+	app.HandleDir("/", AssetFile())
+
+	if err := app.Listen(":8080"); err != nil {
+		log.Fatal("app.Listen", err)
+	}
 }

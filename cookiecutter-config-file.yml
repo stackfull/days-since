@@ -1,0 +1,12 @@
+cookiecutter_inputs:
+  project_name: "days-since"
+  go_module_path: "github.com/stackfull/days-since"
+  license_owner: "stackfull"
+  base_branch: "main"
+  contact_email: ""
+  project_description: "Days Since App"
+  github_specific_features: "y"
+  use_codecov: "n"
+  use_precommit: "y"
+  go_version: "1.17"
+  license: "BSD-3"
